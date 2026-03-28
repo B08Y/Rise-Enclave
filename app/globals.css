@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+
+  --color-beige-100: #f5ebe0;
+  --color-beige-200: #e6d5c3;
+  --color-beige-300: #d4c3b3;
+  --color-beige-400: #c2b09f;
+  --color-beige-500: #b09e8c;
+  --color-beige-600: #8c7a68;
+  --color-beige-700: #685846;
+  --color-beige-800: #463826;
+  --color-beige-900: #261b0d;
+
+  --color-charcoal-800: #1f1f1f;
+  --color-charcoal-900: #141414;
+  --color-charcoal-950: #0a0a0a;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-charcoal-900/60 backdrop-blur-md border border-white/5;
+  }
+  .glass-card {
+    @apply bg-charcoal-800/40 backdrop-blur-sm border border-white/5 hover:border-beige-500/30 transition-colors duration-300;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-beige-200 to-beige-500;
+  }
+  .bg-gradient-beige {
+    @apply bg-gradient-to-r from-beige-400 to-beige-600;
+  }
+}
